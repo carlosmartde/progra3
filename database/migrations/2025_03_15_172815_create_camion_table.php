@@ -23,11 +23,9 @@ return new class extends Migration
             $table->dateTime('updated_at');
             $table->unsignedBigInteger('id_marca');
             
-            // Relaciones
             $table->foreign('id_transporte')->references('id_transporte')->on('transporte');
             $table->foreign('id_marca')->references('id_marca')->on('marca');
             
-            // Índices
             $table->index('id_camion');
             $table->index('id_transporte');
             $table->index('id_marca');

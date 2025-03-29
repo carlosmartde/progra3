@@ -11,22 +11,18 @@ class CamionSeeder extends Seeder
 {
     public function run()
     {
-        // Aseguramos que existan marcas y transportes
         $marcas = Marca::all();
         $transportes = Transporte::all();
         
-        // Si no hay datos, regresamos sin hacer nada
         if($marcas->isEmpty() || $transportes->isEmpty()) {
             return;
         }
         
-        // Crear 20 camiones asociados a marcas y transportes existentes
-        for ($i = 0; $i < 20; $i++) {
-            Camion::factory()
+            Camion::factory()->count(1000)
                 ->create([
                     'id_marca' => $marcas->random()->id_marca,
                     'id_transporte' => $transportes->random()->id_transporte,
                 ]);
-        }
+        
     }
 }

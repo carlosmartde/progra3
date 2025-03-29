@@ -9,7 +9,6 @@ class MarcaSeeder extends Seeder
 {
     public function run()
     {
-        // Crear marcas específicas
         $marcas = [
             'Volvo', 'Mercedes-Benz', 'Scania', 'MAN', 'DAF', 
             'Iveco', 'Kenworth', 'Freightliner', 'Peterbilt', 'Mack'

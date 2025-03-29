@@ -8,7 +8,6 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        // El orden es importante debido a las relaciones
         $this->call([
             TransporteSeeder::class,
             MarcaSeeder::class,
